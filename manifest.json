@@ -1,0 +1,25 @@
+{
+  "name": "LIYAH GROUP — Digital Technology Company",
+  "short_name": "LIYAH GROUP",
+  "description": "We help businesses, brands and leaders build powerful digital ecosystems — enterprise software, AI solutions, e-commerce, and cloud infrastructure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "categories": ["business", "productivity", "technology"],
+  "icons": [
+    {
+      "src": "/assets/images/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://liyahgroup.me/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://liyahgroup.me/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://liyahgroup.me/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://liyahgroup.me/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://liyahgroup.me/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://liyahgroup.me/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://liyahgroup.me/services/website-design-development</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://liyahgroup.me/services/ecommerce-shopify</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://liyahgroup.me/services/seo-digital-growth-strategy</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://liyahgroup.me/saas</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://liyahgroup.me/saas/liafrik</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://liyahgroup.me/pricing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://liyahgroup.me/projects</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://liyahgroup.me/courses</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://liyahgroup.me/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://liyahgroup.me/blog/why-your-website-is-losing-clients</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://liyahgroup.me/blog/building-ecommerce-that-scales</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://liyahgroup.me/blog/digital-ecosystem-advantage</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://liyahgroup.me/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://liyahgroup.me/legal</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <!-- Local SEO pages - Francophone -->
+  <url><loc>https://liyahgroup.me/fr/agence-digitale-cote-divoire</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://liyahgroup.me/fr/creation-site-web-senegal</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://liyahgroup.me/fr/e-commerce-cameroun</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://liyahgroup.me/fr/agence-digitale-benin</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://liyahgroup.me/fr/agence-digitale-togo</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://liyahgroup.me/fr/agence-digitale-rdc</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://liyahgroup.me/fr/agence-digitale-maroc</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <!-- Local SEO pages - Anglophone -->
+  <url><loc>https://liyahgroup.me/en/digital-agency-nigeria</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://liyahgroup.me/en/web-development-ghana</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://liyahgroup.me/en/ecommerce-agency-kenya</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://liyahgroup.me/en/digital-agency-south-africa</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://liyahgroup.me/en/digital-agency-uganda</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://liyahgroup.me/en/digital-agency-tanzania</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <!-- Local SEO pages - UAE -->
+  <url><loc>https://liyahgroup.me/en/digital-agency-united-arab-emirates</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://liyahgroup.me/en/digital-agency-dubai</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://liyahgroup.me/en/digital-agency-sharjah</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>

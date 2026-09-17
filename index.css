@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', system-ui, sans-serif;
+    background-color: #000000;
+    color: #C9CCD1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+}
+
+@layer components {
+  .accent-text { color: #f5941f; }
+  .secondary-text { color: #8A8F98; }
+
+  /* Primary button — premium animated gold pill */
+  .btn-primary {
+    @apply text-black px-7 py-3 text-sm font-bold rounded-full transition-all duration-300;
+    background: linear-gradient(110deg, #B4860F 0%, #F3DA8A 25%, #D4A017 50%, #F3DA8A 75%, #B4860F 100%);
+    background-size: 250% 100%;
+    animation: gold-sheen 4s linear infinite;
+    box-shadow: 0 0 0 1px rgba(212,160,23,0.3), 0 4px 20px rgba(212,160,23,0.15);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 0 1px rgba(212,160,23,0.5), 0 8px 28px rgba(212,160,23,0.35);
+    transform: translateY(-1px) scale(1.015);
+  }
+  .btn-primary:focus-visible {
+    outline: 2px solid #D4A017;
+    outline-offset: 2px;
+  }
+
+  /* Outline button — pill ghost */
+  .btn-outline {
+    @apply border text-white px-7 py-3 text-sm font-semibold rounded-full transition-all duration-300 bg-transparent;
+    border-color: rgba(255,255,255,0.14);
+  }
+  .btn-outline:hover {
+    @apply bg-white/[0.06];
+    border-color: rgba(212,160,23,0.4);
+    transform: translateY(-1px);
+  }
+
+  /* Ghost button */
+  .btn-ghost {
+    @apply text-[#8A8F98] px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200;
+  }
+  .btn-ghost:hover {
+    @apply text-white bg-white/[0.05];
+  }
+
+  /* Section label */
+  .section-label {
+    @apply text-[#8A8F98] uppercase tracking-widest text-xs font-semibold mb-4 block;
+  }
+
+  /* Card — Linear-style dark elevated surface */
+  .card {
+    @apply rounded-xl transition-all duration-300;
+    background: #0B0C0E;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .card-hover:hover {
+    border-color: rgba(255,255,255,0.16);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    transform: translateY(-2px);
+  }
+
+  /* Scroll animation */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .animate-on-scroll-delay-1 { transition-delay: 0.1s; }
+  .animate-on-scroll-delay-2 { transition-delay: 0.2s; }
+  .animate-on-scroll-delay-3 { transition-delay: 0.3s; }
+  .animate-on-scroll-delay-4 { transition-delay: 0.4s; }
+
+  /* Nav link underline */
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background: #2563eb;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .nav-link:hover::after { transform: scaleX(1); }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+}
+
+/* ── Keyframe animations ─────────────────────────────────────────── */
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animated-gradient {
+  background: linear-gradient(135deg, #163e3c, #1a4d4a, #2f7d74, #1a4d4a, #163e3c);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Dropdown animation */
+@keyframes dropdownIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-dropdown { animation: dropdownIn 0.25s ease forwards; }
+
+/* Shimmer text */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.text-shimmer {
+  background: linear-gradient(90deg, #f5941f 0%, #fbbf6b 25%, #f5941f 50%, #fbbf6b 75%, #f5941f 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Floating */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: floatY 4s ease-in-out infinite; }
+
+/* Pulse glow */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(245,148,31,0.15); }
+  50% { box-shadow: 0 0 40px rgba(245,148,31,0.35); }
+}
+.animate-pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+
+/* Card glow */
+.card-glow {
+  position: relative;
+  overflow: hidden;
+}
+.card-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.card-glow:hover::before { transform: scaleX(1); }
+
+/* Scroll indicator */
+@keyframes scrollDown {
+  0% { transform: translateY(0); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(20px); opacity: 0; }
+}
+.animate-scroll-indicator { animation: scrollDown 2s ease-in-out infinite; }
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 30s linear infinite; }
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in { animation: fadeIn 0.6s ease forwards; }
+
+/* Fade up */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.7s ease forwards; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #1d4ed8; }
+
+*:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(37,99,235,0.2);
+  color: #0f172a;
+}
