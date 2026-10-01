@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { useLang } from '@/i18n/LangContext';
+import SEO from '@/components/SEO';
 
 const images = [
   'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -40,8 +41,23 @@ export default function BlogArticlePage() {
   const body = bodies[index];
   const readTime = readTimes[index];
 
+  const seoDescription = `${article.category} — ${article.title}`;
+  const articleLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: article.title,
+      articleSection: article.category,
+      image,
+      author: { '@type': 'Organization', name: 'LIYAH GROUP', url: 'https://liyahgroup.me' },
+      publisher: { '@id': 'https://liyahgroup.me/#organization' },
+      mainEntityOfPage: `https://liyahgroup.me/blog/${slug}`,
+    },
+  ];
+
   return (
     <>
+      <SEO title={`${article.title} | LIYAH GROUP`} description={seoDescription} path={`/blog/${slug}`} image={image} type="article" jsonLd={articleLd} />
       <section className="relative pt-32 md:pt-40 pb-12 bg-black overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_50%_0%,rgba(31,95,91,0.05),transparent_70%)] pointer-events-none" />
 

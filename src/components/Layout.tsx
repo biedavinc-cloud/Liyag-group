@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import CursorGlow from '@/components/CursorGlow';
+import RouteSEO from '@/components/RouteSEO';
 import { useGlobalScrollAnimation } from '@/hooks/useGlobalScrollAnimation';
 
 export default function Layout() {
@@ -20,6 +21,7 @@ export default function Layout() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <RouteSEO />
       <CursorGlow />
       <ScrollToTop />
       <Header />

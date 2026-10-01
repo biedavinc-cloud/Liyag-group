@@ -54,3 +54,4 @@ export function getSeoRoutes(): SeoRoute[] {
 }
 
 export const absolute = (path: string) => `${SITE_URL}${path === '/' ? '/' : path}`;
+export { organizationJsonLd, websiteJsonLd } from './seoPages';

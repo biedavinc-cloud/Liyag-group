@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /api/
-Disallow: /*.json$
 Disallow: /dashboard
 
 Sitemap: https://liyahgroup.me/sitemap.xml
