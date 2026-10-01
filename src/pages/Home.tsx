@@ -24,7 +24,7 @@ import {
   Briefcase, Sparkles, Boxes,
 } from 'lucide-react';
 import { locations } from '@/data/locations';
-import { getLiAfrikModules, tr } from '@/data/saasProducts';
+import { getLiafrikModules, tr } from '@/data/saasProducts';
 import { CircuitLines, CircuitCorner } from '@/components/CircuitLines';
 import { getFig } from '@/components/FigDiagrams';
 
@@ -635,13 +635,13 @@ function FaqPreview() {
   );
 }
 
-// ─── Products (LiAfrik) ──────────────────────────────────────────────────────
+// ─── Products (Liafrik) ──────────────────────────────────────────────────────
 
 
 function ProductsSection() {
   const { t, lang } = useLang();
   const ref = useScrollAnimation();
-  const modules = getLiAfrikModules();
+  const modules = getLiafrikModules();
   const liveCount = modules.filter((m) => !m.comingSoon).length;
 
   return (
@@ -649,7 +649,7 @@ function ProductsSection() {
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="mb-14 max-w-3xl flex items-start gap-5">
           <div className="bg-white rounded-xl p-2.5 flex-shrink-0 mt-1">
-            <img src="/assets/images/liafrik-official.png" alt="LiAfrik" className="w-11 h-auto md:w-14 object-contain" />
+            <img src="/assets/images/liafrik-icon.png" alt="Liafrik" className="w-11 h-auto md:w-14 object-contain" />
           </div>
           <div>
             <span className="animate-on-scroll section-label">{t.products.label}</span>

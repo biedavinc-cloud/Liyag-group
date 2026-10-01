@@ -21,14 +21,14 @@ export interface SaasProduct {
 export const saasProducts: SaasProduct[] = [
   {
     slug: 'liafrik',
-    name: 'LiAfrik',
+    name: 'Liafrik',
     tagline: {
       en: 'One Platform. Every Module. Built for Scale.',
       fr: 'Une Plateforme. Tous les Modules. Conçue pour Grandir.',
     },
     mainBenefit: {
-      en: 'LiAfrik is the all-in-one modular business platform developed by LIYAH GROUP. From CRM to e-commerce to AI tools, each module connects seamlessly — so your data, operations, and growth stay unified.',
-      fr: "LiAfrik est la plateforme business modulaire tout-en-un développée par LIYAH GROUP. Du CRM à l'e-commerce en passant par les outils IA, chaque module se connecte sans effort — pour garder vos données, opérations et croissance unifiées.",
+      en: 'Liafrik is the all-in-one modular business platform developed by LIYAH GROUP. From CRM to e-commerce to AI tools, each module connects seamlessly — so your data, operations, and growth stay unified.',
+      fr: "Liafrik est la plateforme business modulaire tout-en-un développée par LIYAH GROUP. Du CRM à l'e-commerce en passant par les outils IA, chaque module se connecte sans effort — pour garder vos données, opérations et croissance unifiées.",
     },
     description: {
       en: 'The unified African business operating system — activate only the modules you need and scale as you grow.',
@@ -50,7 +50,7 @@ export function getSaasProductBySlug(slug: string) {
   return saasProducts.find((p) => p.slug === slug);
 }
 
-export interface LiAfrikModule {
+export interface LiafrikModule {
   slug: string;
   name: string;
   category: Bilingual;
@@ -63,7 +63,7 @@ export interface LiAfrikModule {
   comingSoon?: boolean;
 }
 
-const MODULES: LiAfrikModule[] = [
+const MODULES: LiafrikModule[] = [
   {
     slug: 'pos',
     name: 'POS',
@@ -112,7 +112,7 @@ const MODULES: LiAfrikModule[] = [
     slug: 'klasoo',
     name: 'Klasoo',
     category: { en: 'Coming Soon', fr: 'Bientôt Disponible' },
-    valueProposition: { en: 'A new LiAfrik module, launching soon.', fr: 'Un nouveau module LiAfrik, bientôt disponible.' },
+    valueProposition: { en: 'A new Liafrik module, launching soon.', fr: 'Un nouveau module Liafrik, bientôt disponible.' },
     mainBenefit: { en: 'Stay tuned — this module is in active development.', fr: 'Restez à l\'écoute — ce module est en cours de développement.' },
     mockupType: 'dashboard',
     icon: 'Briefcase',
@@ -157,7 +157,7 @@ const MODULES: LiAfrikModule[] = [
     slug: 'kolo',
     name: 'Kolo',
     category: { en: 'Coming Soon', fr: 'Bientôt Disponible' },
-    valueProposition: { en: 'A new LiAfrik module, launching soon.', fr: 'Un nouveau module LiAfrik, bientôt disponible.' },
+    valueProposition: { en: 'A new Liafrik module, launching soon.', fr: 'Un nouveau module Liafrik, bientôt disponible.' },
     mainBenefit: { en: 'Stay tuned — this module is in active development.', fr: 'Restez à l\'écoute — ce module est en cours de développement.' },
     mockupType: 'tontine',
     icon: 'Coins',
@@ -202,7 +202,7 @@ const MODULES: LiAfrikModule[] = [
     slug: 'zando',
     name: 'Zando',
     category: { en: 'Coming Soon', fr: 'Bientôt Disponible' },
-    valueProposition: { en: 'A new LiAfrik module, launching soon.', fr: 'Un nouveau module LiAfrik, bientôt disponible.' },
+    valueProposition: { en: 'A new Liafrik module, launching soon.', fr: 'Un nouveau module Liafrik, bientôt disponible.' },
     mainBenefit: { en: 'Stay tuned — this module is in active development.', fr: 'Restez à l\'écoute — ce module est en cours de développement.' },
     mockupType: 'ecommerce',
     icon: 'ShoppingCart',
@@ -234,6 +234,6 @@ const MODULES: LiAfrikModule[] = [
   },
 ];
 
-export function getLiAfrikModules(): LiAfrikModule[] {
+export function getLiafrikModules(): LiafrikModule[] {
   return MODULES;
 }

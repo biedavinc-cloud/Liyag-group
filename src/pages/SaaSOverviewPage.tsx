@@ -5,7 +5,7 @@ import SEO from '@/components/SEO';
 import ModuleIcon from '@/components/ModuleIcon';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { useLang } from '@/i18n/LangContext';
-import { saasProducts, getLiAfrikModules, tr } from '@/data/saasProducts';
+import { saasProducts, getLiafrikModules, tr } from '@/data/saasProducts';
 
 const WHATSAPP_NUMBER = '971503857203';
 
@@ -13,7 +13,7 @@ export default function SaaSOverviewPage() {
   const { lang } = useLang();
   const ref = useScrollAnimation();
   const liafrik = saasProducts.find((p) => p.slug === 'liafrik');
-  const modules = getLiAfrikModules();
+  const modules = getLiafrikModules();
 
   const jsonLd = [
     {
@@ -31,22 +31,22 @@ export default function SaaSOverviewPage() {
   return (
     <div ref={ref as React.RefObject<HTMLDivElement>}>
       <SEO
-        title={lang === 'FR' ? 'Produits SaaS | LiAfrik par LIYAH GROUP' : 'SaaS Products | LiAfrik by LIYAH GROUP'}
+        title={lang === 'FR' ? 'Produits SaaS | Liafrik par LIYAH GROUP' : 'SaaS Products | Liafrik by LIYAH GROUP'}
         description={lang === 'FR'
-          ? 'LiAfrik est le système d\'exploitation business africain unifié. CRM, POS, RH, Santé, Comptabilité, E-commerce, Éducation, Immobilier — 15 modules sur une seule plateforme.'
-          : 'LiAfrik is the unified African business operating system. CRM, POS, HR, Health, Accounting, E-commerce, Education, Real Estate — 15 modules on one platform.'}
+          ? 'Liafrik est le système d\'exploitation business africain unifié. CRM, POS, RH, Santé, Comptabilité, E-commerce, Éducation, Immobilier — 15 modules sur une seule plateforme.'
+          : 'Liafrik is the unified African business operating system. CRM, POS, HR, Health, Accounting, E-commerce, Education, Real Estate — 15 modules on one platform.'}
         path="/saas"
         jsonLd={jsonLd}
       />
       <PageHero
         label={lang === 'FR' ? 'PRODUITS SaaS' : 'SaaS PRODUCTS'}
-        title={lang === 'FR' ? 'LiAfrik — L\'OS Business Africain' : 'LiAfrik — The African Business OS'}
+        title={lang === 'FR' ? 'Liafrik — L\'OS Business Africain' : 'Liafrik — The African Business OS'}
         subtitle={lang === 'FR'
           ? '15 modules. Une seule plateforme. Activez ce dont vous avez besoin — évoluez à votre rythme. Conçu pour l\'Afrique et les EAU.'
           : '15 modules. One platform. Activate what you need — scale as you grow. Built for Africa and the UAE.'}
       />
 
-      {/* LiAfrik main product spotlight */}
+      {/* Liafrik main product spotlight */}
       {liafrik && (
         <section className="relative py-14 md:py-20 bg-[#0B0C0E] overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.08),transparent_60%)]" />
@@ -55,7 +55,7 @@ export default function SaaSOverviewPage() {
               <div>
                 <span className="section-label text-[#8A8F98]">{lang === 'FR' ? 'PRODUIT PRINCIPAL' : 'FLAGSHIP PRODUCT'}</span>
                 <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-white mb-6 text-balance">
-                  {lang === 'FR' ? 'LiAfrik — Un Système, Toute Votre Entreprise' : 'LiAfrik — One System, Your Entire Business'}
+                  {lang === 'FR' ? 'Liafrik — Un Système, Toute Votre Entreprise' : 'Liafrik — One System, Your Entire Business'}
                 </h2>
                 <p className="text-[#8A8F98] text-base md:text-lg leading-relaxed mb-8">
                   {tr(liafrik.mainBenefit, lang)}
@@ -70,7 +70,7 @@ export default function SaaSOverviewPage() {
                 </ul>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link to="/saas/liafrik" className="btn-primary inline-flex items-center justify-center gap-2" data-cta="saas-liafrik-overview">
-                    {lang === 'FR' ? 'Découvrir LiAfrik' : 'Explore LiAfrik'}
+                    {lang === 'FR' ? 'Découvrir Liafrik' : 'Explore Liafrik'}
                     <ArrowRight size={14} />
                   </Link>
                   <Link to="/contact" className="inline-flex items-center justify-center gap-2 border border-white/[0.16] text-[#C9CCD1] px-7 py-3 text-sm font-semibold rounded-lg hover:border-white/[0.16] hover:text-white transition-all duration-300" data-cta="saas-liafrik-demo">
@@ -80,7 +80,7 @@ export default function SaaSOverviewPage() {
               </div>
               <div className="animate-fade-in flex items-center justify-center">
                 <div className="relative w-full aspect-square max-w-sm rounded-2xl border border-white/[0.08] bg-white flex items-center justify-center overflow-hidden p-10">
-                  <img src="/assets/images/liafrik-official.png" alt="LiAfrik" className="relative w-full h-auto object-contain" />
+                  <img src="/assets/images/liafrik-official.png" alt="Liafrik" className="relative w-full h-auto object-contain" />
                 </div>
               </div>
             </div>
@@ -135,8 +135,8 @@ export default function SaaSOverviewPage() {
               </h3>
               <p className="text-[#8A8F98] text-sm mb-6 leading-relaxed">
                 {lang === 'FR'
-                  ? 'Réservez un appel stratégique pour voir comment LiAfrik peut s\'adapter à votre business.'
-                  : 'Book a strategy call to see how LiAfrik can fit your business.'}
+                  ? 'Réservez un appel stratégique pour voir comment Liafrik peut s\'adapter à votre business.'
+                  : 'Book a strategy call to see how Liafrik can fit your business.'}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link to="/contact" className="btn-primary inline-flex items-center justify-center gap-2" data-cta="saas-demo-contact">
@@ -146,8 +146,8 @@ export default function SaaSOverviewPage() {
                 <a
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
                     lang === 'FR'
-                      ? 'Bonjour LIYAH GROUP, je souhaite une démo de LiAfrik.'
-                      : 'Hello LIYAH GROUP, I\'d like a demo of LiAfrik.'
+                      ? 'Bonjour LIYAH GROUP, je souhaite une démo de Liafrik.'
+                      : 'Hello LIYAH GROUP, I\'d like a demo of Liafrik.'
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"

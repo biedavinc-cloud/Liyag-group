@@ -10,7 +10,7 @@ const aboutFeatures = [
   { icon: Code2, label: 'Website & App Development' },
   { icon: ShoppingBag, label: 'E-Commerce & Shopify' },
   { icon: TrendingUp, label: 'SEO & Digital Growth' },
-  { icon: Layers, label: 'LiAfrik SaaS Platform' },
+  { icon: Layers, label: 'Liafrik SaaS Platform' },
 ];
 
 function StatItem({ end, prefix, suffix, label }: { end: number; prefix: string; suffix: string; label: string }) {
@@ -70,7 +70,7 @@ export default function AboutPage() {
             </div>
             <div className="flex items-center gap-3 mt-6 max-w-md mx-auto md:mx-0">
               <div className="w-12 h-12 rounded-full bg-white border border-white/[0.08] flex items-center justify-center flex-shrink-0 p-1.5">
-                <img src="/assets/images/liafrik-official.png" alt="LiAfrik" className="w-full h-full object-contain" />
+                <img src="/assets/images/liafrik-icon.png" alt="Liafrik" className="w-full h-full object-contain" />
               </div>
               <div>
                 <p className="text-xs font-bold uppercase tracking-wide text-accent-600">
@@ -135,8 +135,8 @@ export default function AboutPage() {
                 {
                   year: '2025',
                   label: {
-                    en: 'Launched LiAfrik with the full suite of SaaS platforms in Dubai, UAE',
-                    fr: 'Lance LiAfrik avec la gamme complète de plateformes SaaS à Dubaï, EAU',
+                    en: 'Launched Liafrik with the full suite of SaaS platforms in Dubai, UAE',
+                    fr: 'Lance Liafrik avec la gamme complète de plateformes SaaS à Dubaï, EAU',
                   },
                 },
               ].map((item, i) => (

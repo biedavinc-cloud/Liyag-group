@@ -34,7 +34,7 @@ const quickLinks = [
 // modules vit déjà sur /saas, pas besoin de la dupliquer en longueur dans le footer.
 const productLinks = [
   { label: 'All SaaS Products', path: '/saas' },
-  { label: 'LiAfrik Platform', path: '/saas/liafrik' },
+  { label: 'Liafrik Platform', path: '/saas/liafrik' },
 ];
 
 const FOOTER_FORM_ENDPOINT = 'https://formsubmit.co/info@liyahgroup.me';

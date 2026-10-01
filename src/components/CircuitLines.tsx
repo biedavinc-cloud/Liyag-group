@@ -5,7 +5,7 @@ interface CircuitAccentProps {
 }
 
 /** Abstract circuit-trace decoration (lines + connector nodes), echoing the
- * LiAfrik logo's visual language. Purely decorative, positioned absolutely
+ * Liafrik logo's visual language. Purely decorative, positioned absolutely
  * by the caller via `className`. */
 export function CircuitLines({ className = '', color = '#D4A017', opacity = 0.35 }: CircuitAccentProps) {
   return (

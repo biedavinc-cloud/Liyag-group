@@ -171,7 +171,7 @@ const en: Translation = {
     courses: 'COURSES', blog: 'BLOG', contact: 'CONTACT US',
     cta: 'Get Started', install: 'Install',
     products: 'SaaS Products',
-    productsChildren: { overview: 'All Products', liafrik: 'LiAfrik Platform' },
+    productsChildren: { overview: 'All Products', liafrik: 'Liafrik Platform' },
     navDesc: { digital: 'Websites, mobile apps & custom platforms', ecommerce: 'E-commerce stores & monetization', growth: 'Strategy, branding & marketing tech', blog: 'Latest insights & analysis', products: 'Scalable business tools & platforms' },
   },
   solutions: {
@@ -224,11 +224,11 @@ const en: Translation = {
   },
   products: {
     label: 'PRODUCTS',
-    title: 'LiAfrik — All-in-One Modular Business Platform',
+    title: 'Liafrik — All-in-One Modular Business Platform',
     subtitle: 'Our flagship platform that unifies your entire business into one ecosystem. Activate only the modules you need — scale as you grow.',
-    flagshipName: 'LiAfrik',
+    flagshipName: 'Liafrik',
     flagshipTagline: 'One Platform. Every Module. Built for Scale.',
-    flagshipDesc: 'LiAfrik is the all-in-one modular business platform developed by LIYAH GROUP. From CRM to POS to accounting, each of its 15 modules connects seamlessly — so your data, operations, and growth stay unified.',
+    flagshipDesc: 'Liafrik is the all-in-one modular business platform developed by LIYAH GROUP. From CRM to POS to accounting, each of its 15 modules connects seamlessly — so your data, operations, and growth stay unified.',
     modulesLabel: 'MODULAR ECOSYSTEM',
     modules: [
       { name: 'CRM', desc: 'Manage leads, pipelines, and customer relationships in one place.' },
@@ -242,7 +242,7 @@ const en: Translation = {
       { name: 'AI Tools', desc: 'Intelligent automation, insights, and decision support.' },
       { name: 'Custom Enterprise Modules', desc: 'Bespoke modules built for your specific operations.' },
     ],
-    cta: 'Explore LiAfrik',
+    cta: 'Explore Liafrik',
   },
   hero: {
     trustBadge: 'Trusted across Africa & the UAE',
@@ -372,7 +372,7 @@ const fr: Translation = {
     courses: 'COURS', blog: 'BLOG', contact: 'CONTACT',
     cta: 'Commencer', install: 'Installer',
     products: 'Produits SaaS',
-    productsChildren: { overview: 'Tous les Produits', liafrik: 'Plateforme LiAfrik' },
+    productsChildren: { overview: 'Tous les Produits', liafrik: 'Plateforme Liafrik' },
     navDesc: { digital: 'Sites web, apps mobiles & plateformes sur-mesure', ecommerce: 'Boutiques e-commerce & monétisation', growth: 'Stratégie, branding & marketing tech', blog: 'Derniers insights & analyses', products: 'Outils business évolutifs & plateformes' },
   },
   solutions: {
@@ -425,11 +425,11 @@ const fr: Translation = {
   },
   products: {
     label: 'PRODUITS',
-    title: 'LiAfrik — Plateforme Business Modulaire Tout-en-Un',
+    title: 'Liafrik — Plateforme Business Modulaire Tout-en-Un',
     subtitle: 'Notre plateforme phare qui unifie toute votre entreprise en un seul écosystème. Activez uniquement les modules dont vous avez besoin — évoluez à votre rythme.',
-    flagshipName: 'LiAfrik',
+    flagshipName: 'Liafrik',
     flagshipTagline: 'Une Plateforme. Chaque Module. Conçue pour l\'Échelle.',
-    flagshipDesc: 'LiAfrik est la plateforme business modulaire tout-en-un développée par LIYAH GROUP. Du CRM au POS en passant par la comptabilité, chacun de ses 15 modules se connecte sans couture — vos données, opérations et croissance restent unifiées.',
+    flagshipDesc: 'Liafrik est la plateforme business modulaire tout-en-un développée par LIYAH GROUP. Du CRM au POS en passant par la comptabilité, chacun de ses 15 modules se connecte sans couture — vos données, opérations et croissance restent unifiées.',
     modulesLabel: 'ÉCOSYSTÈME MODULAIRE',
     modules: [
       { name: 'CRM', desc: 'Gérez prospects, pipelines et relations clients en un seul endroit.' },
@@ -443,7 +443,7 @@ const fr: Translation = {
       { name: 'AI Tools', desc: 'Automatisation intelligente, insights et aide à la décision.' },
       { name: 'Custom Enterprise Modules', desc: 'Modules sur-mesure conçus pour vos opérations spécifiques.' },
     ],
-    cta: 'Explorer LiAfrik',
+    cta: 'Explorer Liafrik',
   },
   hero: {
     trustBadge: 'La confiance à travers l\'Afrique et les EAU',
