@@ -33,17 +33,17 @@ export default function SaaSOverviewPage() {
       <SEO
         title={lang === 'FR' ? 'Produits SaaS | Liafrik par LIYAH GROUP' : 'SaaS Products | Liafrik by LIYAH GROUP'}
         description={lang === 'FR'
-          ? 'Liafrik est le système d\'exploitation business africain unifié. CRM, POS, RH, Santé, Comptabilité, E-commerce, Éducation, Immobilier — 15 modules sur une seule plateforme.'
-          : 'Liafrik is the unified African business operating system. CRM, POS, HR, Health, Accounting, E-commerce, Education, Real Estate — 15 modules on one platform.'}
+          ? `Liafrik est un écosystème SaaS mondial, racines africaines et vision globale. CRM, POS, RH, Santé, Comptabilité, E-commerce, Éducation, Immobilier, Hôtellerie — ${modules.length} modules sur une seule plateforme.`
+          : `Liafrik is a global SaaS ecosystem — African roots, global vision. CRM, POS, HR, Health, Accounting, E-commerce, Education, Real Estate, Hospitality — ${modules.length} modules on one platform.`}
         path="/saas"
         jsonLd={jsonLd}
       />
       <PageHero
         label={lang === 'FR' ? 'PRODUITS SaaS' : 'SaaS PRODUCTS'}
-        title={lang === 'FR' ? 'Liafrik — L\'OS Business Africain' : 'Liafrik — The African Business OS'}
+        title={lang === 'FR' ? 'Liafrik — L\'Écosystème SaaS Mondial' : 'Liafrik — The Global SaaS Ecosystem'}
         subtitle={lang === 'FR'
-          ? '15 modules. Une seule plateforme. Activez ce dont vous avez besoin — évoluez à votre rythme. Conçu pour l\'Afrique et les EAU.'
-          : '15 modules. One platform. Activate what you need — scale as you grow. Built for Africa and the UAE.'}
+          ? `${modules.length} modules. Une seule plateforme. Activez ce dont vous avez besoin — évoluez à votre rythme. Conçu pour le monde entier.`
+          : `${modules.length} modules. One platform. Activate what you need — scale as you grow. Built for the world.`}
       />
 
       {/* Liafrik main product spotlight */}
@@ -94,7 +94,7 @@ export default function SaaSOverviewPage() {
           <div className="text-center mb-12 max-w-3xl mx-auto">
             <span className="section-label">{lang === 'FR' ? 'ÉCOSYSTÈME LIAFRIK' : 'LIAFRIK ECOSYSTEM'}</span>
             <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-white mb-4 text-balance">
-              {lang === 'FR' ? '15 Modules Connectés, Une Seule Plateforme' : '15 Connected Modules, One Platform'}
+              {lang === 'FR' ? `${modules.length} Modules Connectés, Une Seule Plateforme` : `${modules.length} Connected Modules, One Platform`}
             </h2>
             <p className="text-[#8A8F98] text-sm md:text-base leading-relaxed">
               {lang === 'FR'
@@ -103,7 +103,7 @@ export default function SaaSOverviewPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
             {modules.map((product, i) => (
               <Link
                 key={product.slug}

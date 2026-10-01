@@ -20,21 +20,20 @@ const socialLinks = [
 ];
 
 const quickLinks = [
-  { label: 'About', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'SaaS Products', path: '/saas' },
-  { label: 'Pricing', path: '/pricing' },
-  { label: 'Courses', path: '/courses' },
-  { label: 'Projects', path: '/projects' },
-  { label: 'Blog', path: '/blog' },
-  { label: 'Contact', path: '/contact' },
+  { label: { EN: 'About', FR: 'À propos' }, path: '/about' },
+  { label: { EN: 'Services', FR: 'Services' }, path: '/services' },
+  { label: { EN: 'SaaS Products', FR: 'Produits SaaS' }, path: '/saas' },
+  { label: { EN: 'Pricing', FR: 'Tarifs' }, path: '/pricing' },
+  { label: { EN: 'Courses', FR: 'Formations' }, path: '/courses' },
+  { label: { EN: 'Projects', FR: 'Projets' }, path: '/projects' },
+  { label: { EN: 'Blog', FR: 'Blog' }, path: '/blog' },
+  { label: { EN: 'Contact', FR: 'Contact' }, path: '/contact' },
 ];
 
-// Uniquement le produit phare + vue d'ensemble ici — la liste complète des 11
-// modules vit déjà sur /saas, pas besoin de la dupliquer en longueur dans le footer.
+// Produit phare + vue d'ensemble : la liste complète des modules vit sur /saas.
 const productLinks = [
-  { label: 'All SaaS Products', path: '/saas' },
-  { label: 'Liafrik Platform', path: '/saas/liafrik' },
+  { label: { EN: 'All SaaS Products', FR: 'Tous les produits SaaS' }, path: '/saas' },
+  { label: { EN: 'Liafrik Platform', FR: 'Plateforme Liafrik' }, path: '/saas/liafrik' },
 ];
 
 const FOOTER_FORM_ENDPOINT = 'https://formsubmit.co/info@liyahgroup.me';
@@ -42,10 +41,12 @@ const FOOTER_FORM_ENDPOINT = 'https://formsubmit.co/info@liyahgroup.me';
 export default function Footer() {
   const { t, lang } = useLang();
   const [email, setEmail] = useState('');
+  const [honey, setHoney] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const onNewsletterSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (honey) return; // robot : on ignore silencieusement
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setStatus('error');
       return;
@@ -57,6 +58,7 @@ export default function Footer() {
       formData.append('_subject', 'New newsletter signup — LIYAH GROUP');
       formData.append('_template', 'table');
       formData.append('_captcha', 'false');
+      formData.append('_honey', honey);
       const response = await fetch(FOOTER_FORM_ENDPOINT, {
         method: 'POST',
         body: formData,
@@ -79,13 +81,13 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.08] to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.03),transparent_60%)] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-14">
+      <div className="relative max-w-7xl mx-auto px-6 pt-12 pb-6">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-8 mb-8">
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <h3 className="text-xl font-semibold text-white tracking-tight mb-4">LIYAH GROUP</h3>
-            <p className="text-[#5E6169] text-sm leading-relaxed mb-6 max-w-sm">{t.footer.tagline}</p>
-            <div className="flex gap-3 mb-6">
+          <div className="col-span-2">
+            <h3 className="text-xl font-semibold text-white tracking-tight mb-3">LIYAH GROUP</h3>
+            <p className="text-[#8A8F98] text-sm leading-relaxed mb-5 max-w-sm">{t.footer.tagline}</p>
+            <div className="flex gap-3 mb-5">
               {socialLinks.map((s) => (
                 <a
                   key={s.label}
@@ -104,13 +106,13 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white text-xs font-semibold uppercase tracking-widest mb-5">{lang === 'FR' ? 'Liens Rapides' : 'Quick Links'}</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white text-xs font-semibold uppercase tracking-widest mb-4">{lang === 'FR' ? 'Liens Rapides' : 'Quick Links'}</h4>
+            <ul className="space-y-2.5">
               {quickLinks.map((item) => (
-                <li key={item.label}>
-                  <Link to={item.path} className="text-[#5E6169] hover:text-white transition-colors text-sm flex items-center gap-1.5 group">
+                <li key={item.path}>
+                  <Link to={item.path} className="text-[#8A8F98] hover:text-white transition-colors text-sm flex items-center gap-1.5 group">
                     <ArrowRight size={12} className="opacity-0 group-hover:opacity-100 -ml-5 group-hover:ml-0 transition-all" />
-                    {item.label}
+                    {item.label[lang]}
                   </Link>
                 </li>
               ))}
@@ -119,13 +121,13 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="text-white text-xs font-semibold uppercase tracking-widest mb-5">{lang === 'FR' ? 'Produits SaaS' : 'SaaS Products'}</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white text-xs font-semibold uppercase tracking-widest mb-4">{lang === 'FR' ? 'Produits SaaS' : 'SaaS Products'}</h4>
+            <ul className="space-y-2.5">
               {productLinks.map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="text-[#5E6169] hover:text-white transition-colors text-sm flex items-center gap-1.5 group">
+                  <Link to={item.path} className="text-[#8A8F98] hover:text-white transition-colors text-sm flex items-center gap-1.5 group">
                     <ArrowRight size={12} className="opacity-0 group-hover:opacity-100 -ml-5 group-hover:ml-0 transition-all flex-shrink-0" />
-                    {item.label}
+                    {item.label[lang]}
                   </Link>
                 </li>
               ))}
@@ -133,42 +135,48 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="text-white text-xs font-semibold uppercase tracking-widest mb-5">{t.footer.contactTitle}</h4>
-            <ul className="space-y-3 text-sm">
+          <div className="col-span-2 lg:col-span-1">
+            <h4 className="text-white text-xs font-semibold uppercase tracking-widest mb-4">{t.footer.contactTitle}</h4>
+            <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="mailto:info@liyahgroup.me" className="flex items-center gap-2.5 text-[#5E6169] hover:text-white transition-colors">
+                <a href="mailto:info@liyahgroup.me" className="flex items-center gap-2.5 text-[#8A8F98] hover:text-white transition-colors">
                   <Mail size={14} className="text-[#8A8F98] flex-shrink-0" />
                   info@liyahgroup.me
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/971503857203" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-[#5E6169] hover:text-white transition-colors">
+                <a href="https://wa.me/971503857203" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-[#8A8F98] hover:text-white transition-colors">
                   <Phone size={14} className="text-[#8A8F98] flex-shrink-0" />
                   +971 50 385 7203
                 </a>
               </li>
             </ul>
-            <div className="mt-5 pt-5 border-t border-white/[0.08] space-y-3 text-sm">
+            <div className="mt-4 pt-4 border-t border-white/[0.08] space-y-2.5 text-sm">
               <div className="flex items-start gap-2.5">
                 <MapPin size={14} className="text-[#8A8F98] mt-0.5 flex-shrink-0" />
-                <span className="text-[#5E6169]">Yaoundé - Soa, Cameroon</span>
+                <span className="text-[#8A8F98]">Yaoundé · Soa, Cameroon</span>
               </div>
               <div className="flex items-start gap-2.5">
                 <MapPin size={14} className="text-[#8A8F98] mt-0.5 flex-shrink-0" />
-                <span className="text-[#5E6169]">Jumeirah 1, Dubai, UAE</span>
+                <span className="text-[#8A8F98]">Jumeirah 1, Dubai, UAE</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Newsletter mini — fonctionnel, envoie vers info@liyahgroup.me */}
-        <div className="border-t border-white/[0.08] pt-8 pb-8">
+        <div className="border-t border-white/[0.08] py-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-[#5E6169] text-sm">{t.newsletter.subtitle}</p>
+            <p className="text-[#8A8F98] text-sm text-center md:text-left">{t.newsletter.subtitle}</p>
             <form onSubmit={onNewsletterSubmit} className="flex gap-2 w-full md:w-auto">
+              <input type="text" name="_honey" value={honey} onChange={(e) => setHoney(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
+              <label htmlFor="footer-newsletter-email" className="sr-only">{t.newsletter.placeholder}</label>
               <input
+                id="footer-newsletter-email"
                 type="email"
+                name="email"
+                autoComplete="email"
+                required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t.newsletter.placeholder}
@@ -180,19 +188,19 @@ export default function Footer() {
             </form>
           </div>
           {status === 'success' && (
-            <p className="flex items-center gap-2 text-xs text-green-500 mt-3">
+            <p role="status" className="flex items-center gap-2 text-xs text-green-500 mt-3">
               <CheckCircle size={13} /> {lang === 'FR' ? 'Merci ! Vous êtes inscrit.' : 'Thanks! You\'re subscribed.'}
             </p>
           )}
           {status === 'error' && (
-            <p className="text-xs text-red-400 mt-3">
+            <p role="alert" className="text-xs text-red-400 mt-3">
               {lang === 'FR' ? 'Merci de renseigner un email valide.' : 'Please enter a valid email.'}
             </p>
           )}
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-white/[0.08] flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-5 border-t border-white/[0.08] flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[#8A8F98] leading-relaxed text-center md:text-left">{t.footer.copyright}</p>
           <Link to="/legal" className="inline-flex items-center gap-2 text-xs text-[#8A8F98] hover:text-white transition-colors">
             <FileText size={12} /> {t.footer.legal}

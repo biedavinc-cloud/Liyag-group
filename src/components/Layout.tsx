@@ -6,9 +6,13 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import CursorGlow from '@/components/CursorGlow';
+import { useGlobalScrollAnimation } from '@/hooks/useGlobalScrollAnimation';
 
 export default function Layout() {
   const location = useLocation();
+
+  // Révèle TOUTES les sections animées de la page (et pas seulement celles de la première section).
+  useGlobalScrollAnimation();
 
   useEffect(() => {
     window.scrollTo(0, 0);

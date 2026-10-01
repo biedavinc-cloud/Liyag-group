@@ -228,7 +228,7 @@ const en: Translation = {
     subtitle: 'Our flagship platform that unifies your entire business into one ecosystem. Activate only the modules you need — scale as you grow.',
     flagshipName: 'Liafrik',
     flagshipTagline: 'One Platform. Every Module. Built for Scale.',
-    flagshipDesc: 'Liafrik is the all-in-one modular business platform developed by LIYAH GROUP. From CRM to POS to accounting, each of its 15 modules connects seamlessly — so your data, operations, and growth stay unified.',
+    flagshipDesc: 'Liafrik is the all-in-one modular business platform developed by LIYAH GROUP. From CRM to POS to accounting, each of its 16 modules connects seamlessly — so your data, operations, and growth stay unified.',
     modulesLabel: 'MODULAR ECOSYSTEM',
     modules: [
       { name: 'CRM', desc: 'Manage leads, pipelines, and customer relationships in one place.' },
@@ -429,7 +429,7 @@ const fr: Translation = {
     subtitle: 'Notre plateforme phare qui unifie toute votre entreprise en un seul écosystème. Activez uniquement les modules dont vous avez besoin — évoluez à votre rythme.',
     flagshipName: 'Liafrik',
     flagshipTagline: 'Une Plateforme. Chaque Module. Conçue pour l\'Échelle.',
-    flagshipDesc: 'Liafrik est la plateforme business modulaire tout-en-un développée par LIYAH GROUP. Du CRM au POS en passant par la comptabilité, chacun de ses 15 modules se connecte sans couture — vos données, opérations et croissance restent unifiées.',
+    flagshipDesc: 'Liafrik est la plateforme business modulaire tout-en-un développée par LIYAH GROUP. Du CRM au POS en passant par la comptabilité, chacun de ses 16 modules se connecte sans couture — vos données, opérations et croissance restent unifiées.',
     modulesLabel: 'ÉCOSYSTÈME MODULAIRE',
     modules: [
       { name: 'CRM', desc: 'Gérez prospects, pipelines et relations clients en un seul endroit.' },

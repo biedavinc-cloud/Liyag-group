@@ -1,13 +1,13 @@
 import {
   Store, ShoppingBag, RefreshCw, Users, Briefcase, UtensilsCrossed,
   Cross, Home, Coins, GraduationCap, Pill, Wallet, ShoppingCart,
-  BarChart3, Route, Boxes, Globe, Layers, DollarSign, Target, type LucideIcon,
+  BarChart3, Route, Boxes, BedDouble, Globe, Layers, DollarSign, Target, type LucideIcon,
 } from 'lucide-react';
 
 const ICONS: Record<string, LucideIcon> = {
   Store, ShoppingBag, RefreshCw, Users, Briefcase, UtensilsCrossed,
   Cross, Home, Coins, GraduationCap, Pill, Wallet, ShoppingCart,
-  BarChart3, Route, Globe, Layers, DollarSign, Target,
+  BarChart3, Route, BedDouble, Globe, Layers, DollarSign, Target,
 };
 
 interface ModuleIconProps {
