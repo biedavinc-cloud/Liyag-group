@@ -1,10 +1,16 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function CursorGlow() {
   const ref = useRef<HTMLDivElement>(null);
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    if (window.matchMedia('(hover: none)').matches) return;
+    // Pas de halo sur les appareils tactiles (mobile / tablette)
+    setEnabled(window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+  }, []);
+
+  useEffect(() => {
+    if (!enabled) return;
     let raf = 0;
     const el = ref.current;
     const onMove = (e: MouseEvent) => {
@@ -21,7 +27,9 @@ export default function CursorGlow() {
       window.removeEventListener('mousemove', onMove);
       cancelAnimationFrame(raf);
     };
-  }, []);
+  }, [enabled]);
+
+  if (!enabled) return null;
 
   return (
     <div
